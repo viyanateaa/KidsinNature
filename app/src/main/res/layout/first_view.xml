@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.tensaii.kidsinnature.MainActivity">
+
+        <TextView
+            android:id="@+id/text_headline"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/text_headline"
+            android:textAlignment="center"
+            android:textAppearance="@android:style/TextAppearance.Material.Large"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="40dp"
+            app:layout_constraintHorizontal_bias="0.0" />
+
+        <TextView
+            android:id="@+id/text_sub_headline"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/text_sub_headline"
+            android:textAlignment="center"
+            android:textAppearance="@android:style/TextAppearance.Material.Medium"
+            android:textSize="19sp"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="@+id/text_headline"
+            app:layout_constraintRight_toRightOf="@+id/text_headline"
+            app:layout_constraintTop_toBottomOf="@+id/text_headline"/>
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                      xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                      xmlns:tools="http://schemas.android.com/tools"
+                      android:id="@+id/linearLayout"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_margin="28dp"
+                      card_view:layout_constraintLeft_toLeftOf="@+id/text_sub_headline"
+                      card_view:layout_constraintRight_toRightOf="@+id/text_sub_headline"
+                      card_view:layout_constraintTop_toBottomOf="@+id/text_sub_headline">
+
+            <android.support.v7.widget.CardView
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/card_view_animal"
+                    android:layout_width="120dp"
+                    android:layout_height="140dp"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="4dp"
+                    card_view:cardBackgroundColor="@color/colorPrimary"
+                    card_view:cardCornerRadius="4dp"
+                    card_view:cardElevation="6dp"
+                    tools:ignore="DuplicateIds">
+
+                <TextView
+                    android:id="@+id/text_category_animal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="55dp"
+                    android:text="@string/text_category_animals"
+                    android:textAlignment="center"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/text_sub_headline"
+                    card_view:layout_constraintHorizontal_bias="1.0"/>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_view_plants"
+                android:layout_width="120dp"
+                android:layout_height="140dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="4dp"
+                app:cardBackgroundColor="@color/colorPrimary"
+                app:cardCornerRadius="4dp"
+                app:cardElevation="6dp">
+
+                <TextView
+                    android:id="@+id/text_category_plants"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="55dp"
+                    android:text="@string/text_category__plants"
+                    android:textAlignment="center"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/text_sub_headline"/>
+
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/imageView_Camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:contentDescription="@string/cameraLogo"
+            android:tint="@color/colorAccent"
+            app:layout_constraintLeft_toLeftOf="@+id/text_sub_headline"
+            app:layout_constraintRight_toRightOf="@+id/text_sub_headline"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+            app:srcCompat="@drawable/symbol_camera" />
+
+        <TextView
+            android:id="@+id/text_camera"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/text_take_a_picture"
+            android:textAlignment="center"
+            android:textSize="12sp"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView_Camera"
+            android:layout_marginTop="4dp" />
+
+        <TextView
+            android:id="@+id/text_change_user"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="@string/logout"
+            android:textAlignment="center"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="@+id/text_camera"
+            app:layout_constraintRight_toRightOf="@+id/text_camera"
+            app:layout_constraintTop_toBottomOf="@+id/text_camera"/>
+
+
+    </android.support.constraint.ConstraintLayout>
+
+</LinearLayout>

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/text_headline"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="@string/text_headline"
+            android:textAlignment="center"
+
+            android:textAppearance="@android:style/TextAppearance.Material.Large"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/howtoplay_sub_headline"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:text="@string/animalSubHeadline"
+            android:textAlignment="center"
+            android:textSize="19sp"
+            app:layout_constraintLeft_toLeftOf="@+id/text_headline"
+            app:layout_constraintRight_toRightOf="@+id/text_headline"
+            app:layout_constraintTop_toBottomOf="@+id/text_headline" />
+
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:contentDescription="@string/symbolBackArrow"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/text_headline"
+            app:srcCompat="@drawable/symbol_back" />
+
+        <ImageView
+            android:id="@+id/animal_Image"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/colorPrimary"
+            android:contentDescription="@string/animalImg"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="@+id/howtoplay_sub_headline"
+            app:layout_constraintRight_toRightOf="@+id/howtoplay_sub_headline"
+            app:layout_constraintTop_toBottomOf="@+id/howtoplay_sub_headline"
+            app:srcCompat="@drawable/ordinarie_frog"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            tools:layout_editor_absoluteY="82dp"
+            app:layout_constraintDimensionRatio="h,16:9"/>
+
+        <TextView
+            android:id="@+id/animal_information"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginTop="6dp"
+            android:text="@string/animalInfoText"
+            android:textAlignment="viewStart"
+            android:textSize="12sp"
+            app:layout_constraintLeft_toLeftOf="@+id/animal_Image"
+            app:layout_constraintRight_toRightOf="@+id/animal_Image"
+            app:layout_constraintTop_toBottomOf="@+id/animal_Image"
+            tools:ignore="SmallSp"/>
+
+        <ImageButton
+            android:id="@+id/plusButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/symbolPlus"
+            app:layout_constraintLeft_toLeftOf="@+id/animal_information"
+            app:layout_constraintTop_toBottomOf="@+id/animal_information"
+            app:srcCompat="@drawable/symbol_plus" />
+
+        <TextView
+            android:id="@+id/addImageText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/addImageText"
+            android:textSize="10sp"
+            app:layout_constraintLeft_toRightOf="@+id/plusButton"
+            app:layout_constraintTop_toBottomOf="@+id/animal_information"
+            tools:ignore="SmallSp" />
+
+        <ImageButton
+            android:id="@+id/cameraButton"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:adjustViewBounds="true"
+            android:cropToPadding="false"
+            android:contentDescription="@string/symbolCamera"
+            android:scaleType="fitCenter"
+            app:layout_constraintRight_toRightOf="@+id/animal_information"
+            app:layout_constraintTop_toBottomOf="@+id/animal_information"
+            app:srcCompat="@drawable/symbol_camera" />
+
+        <TextView
+            android:id="@+id/takePicture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/takePictureText"
+            android:textSize="10sp"
+            app:layout_constraintRight_toLeftOf="@+id/cameraButton"
+            app:layout_constraintTop_toBottomOf="@+id/animal_information"
+            tools:ignore="SmallSp" />
+
+        <TextView
+            android:id="@+id/animalScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/objectScore"
+            app:layout_constraintLeft_toLeftOf="@+id/animal_information"
+            app:layout_constraintTop_toBottomOf="@+id/plusButton" />
+
+        <TextView
+            android:id="@+id/animalLevel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/objectLevel"
+            app:layout_constraintLeft_toLeftOf="@+id/animalScore"
+            app:layout_constraintTop_toBottomOf="@+id/animalScore" />
+
+        <TextView
+            android:id="@+id/imageLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/imageLocationText"
+            android:textAlignment="textEnd"
+            app:layout_constraintRight_toRightOf="@+id/cameraButton"
+            app:layout_constraintTop_toTopOf="@+id/animalLevel" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</LinearLayout>

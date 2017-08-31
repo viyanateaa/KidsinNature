@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:context="com.tensaii.kidsinnature.bottomnavigation.ScoreFragment">
+
+    <ImageView
+        android:id="@+id/symbol_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@drawable/symbol_score"/>
+
+    <TextView
+        android:id="@+id/text_bottom_navigation_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/symbol_score"
+        android:layout_centerHorizontal="true"
+        android:text="@string/nav_text_score"
+        android:textAlignment="center"
+        android:textSize="12sp"/>
+
+</RelativeLayout>

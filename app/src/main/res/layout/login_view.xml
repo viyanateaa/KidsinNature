@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/text_headline"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="@string/text_headline"
+            android:textAlignment="center"
+
+            android:textAppearance="@android:style/TextAppearance.Material.Large"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/howtoplay_sub_headline"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:text="@string/loginSubHeadline"
+            android:textAlignment="center"
+            android:textSize="19sp"
+            app:layout_constraintLeft_toLeftOf="@+id/text_headline"
+            app:layout_constraintRight_toRightOf="@+id/text_headline"
+            app:layout_constraintTop_toBottomOf="@+id/text_headline" />
+
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:contentDescription="@string/symbolBackArrow"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/text_headline"
+            app:srcCompat="@drawable/symbol_back" />
+
+        <ImageView
+            android:id="@+id/loginBackground"
+            android:layout_width="0dp"
+            android:layout_height="280dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/login_background"
+            android:contentDescription="@string/imgLoginBackground"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="@+id/howtoplay_sub_headline"
+            app:layout_constraintRight_toRightOf="@+id/howtoplay_sub_headline"
+            app:layout_constraintTop_toBottomOf="@+id/howtoplay_sub_headline" />
+
+        <EditText
+            android:id="@+id/userName"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="38dp"
+            android:layout_marginStart="38dp"
+            android:layout_marginTop="60dp"
+            android:background="@android:color/white"
+            android:ems="10"
+            android:hint="@string/loginNameHint"
+            android:inputType="textPersonName"
+            android:paddingEnd="5dp"
+            android:paddingStart="5dp"
+            app:layout_constraintLeft_toLeftOf="@+id/loginBackground"
+            app:layout_constraintRight_toRightOf="@+id/loginBackground"
+            app:layout_constraintTop_toTopOf="@+id/loginBackground"
+            app:layout_constraintHorizontal_bias="0.0" />
+
+        <EditText
+            android:id="@+id/loginPassword"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginTop="8dp"
+            android:background="@android:color/white"
+            android:ems="10"
+            android:hint="@string/loginPasswordHint"
+            android:inputType="textPassword"
+            android:paddingEnd="5dp"
+            android:paddingStart="5dp"
+            app:layout_constraintLeft_toLeftOf="@+id/userName"
+            app:layout_constraintRight_toRightOf="@+id/userName"
+            app:layout_constraintTop_toBottomOf="@+id/userName" />
+
+        <ImageButton
+            android:id="@+id/playButton"
+            android:layout_width="246dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/submit_btn"
+            android:contentDescription="@string/btnPlay"
+            android:elevation="1dp"
+            app:layout_constraintLeft_toLeftOf="@+id/loginBackground"
+            app:layout_constraintRight_toRightOf="@+id/loginBackground"
+            app:layout_constraintTop_toBottomOf="@+id/loginPassword" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</LinearLayout>

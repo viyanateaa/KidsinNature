@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/text_headline"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="@string/text_headline"
+            android:textAlignment="center"
+
+            android:textAppearance="@android:style/TextAppearance.Material.Large"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/howtoplay_sub_headline"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:text="@string/scoreSubHeadline"
+            android:textAlignment="center"
+            android:textSize="19sp"
+            app:layout_constraintLeft_toLeftOf="@+id/text_headline"
+            app:layout_constraintRight_toRightOf="@+id/text_headline"
+            app:layout_constraintTop_toBottomOf="@+id/text_headline" />
+
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:contentDescription="@string/symbolBackArrow"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/text_headline"
+            app:srcCompat="@drawable/symbol_back" />
+
+        <TextView
+            android:id="@+id/userName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/usernameHeadlineText"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            app:layout_constraintLeft_toLeftOf="@+id/howtoplay_sub_headline"
+            app:layout_constraintRight_toRightOf="@+id/howtoplay_sub_headline"
+            app:layout_constraintTop_toBottomOf="@+id/howtoplay_sub_headline" />
+
+        <TextView
+            android:id="@+id/animalScoreText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/scoreAnimalText"
+            app:layout_constraintLeft_toLeftOf="@+id/userName"
+            app:layout_constraintTop_toBottomOf="@+id/userName" />
+
+        <TextView
+            android:id="@+id/scoreAnimal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/scoreAnimals"
+            android:textAlignment="textEnd"
+            app:layout_constraintRight_toRightOf="@+id/userName"
+            app:layout_constraintTop_toBottomOf="@+id/userName" />
+
+        <TextView
+            android:id="@+id/plantScoreText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/scorePlantText"
+            app:layout_constraintLeft_toLeftOf="@+id/animalScoreText"
+            app:layout_constraintTop_toBottomOf="@+id/animalScoreText" />
+
+        <TextView
+            android:id="@+id/scorePlants"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/scorePlants"
+            android:textAlignment="textEnd"
+            app:layout_constraintRight_toRightOf="@+id/scoreAnimal"
+            app:layout_constraintTop_toBottomOf="@+id/scoreAnimal" />
+
+        <TextView
+            android:id="@+id/levelsClearedText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/scoreLevelText"
+            app:layout_constraintLeft_toLeftOf="@+id/plantScoreText"
+            app:layout_constraintTop_toBottomOf="@+id/plantScoreText" />
+
+        <TextView
+            android:id="@+id/scoreLevel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/scoreLevel"
+            android:textAlignment="textEnd"
+            app:layout_constraintRight_toRightOf="@+id/scorePlants"
+            app:layout_constraintTop_toBottomOf="@+id/scorePlants" />
+
+        <TextView
+            android:id="@+id/recivedAwardsText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/ScoreAwardText"
+            app:layout_constraintLeft_toLeftOf="@+id/levelsClearedText"
+            app:layout_constraintTop_toBottomOf="@+id/levelsClearedText" />
+
+        <TextView
+            android:id="@+id/scoreAwards"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/scoreAwards"
+            app:layout_constraintRight_toRightOf="@+id/scoreLevel"
+            app:layout_constraintTop_toBottomOf="@+id/scoreLevel" />
+
+    </android.support.constraint.ConstraintLayout>
+
+
+</LinearLayout>

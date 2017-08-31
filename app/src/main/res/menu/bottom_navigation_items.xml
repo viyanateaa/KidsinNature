@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_home"
+        android:icon="@drawable/symbol_home"
+        android:title="@string/nav_text_home"/>
+    <item
+        android:id="@+id/action_help"
+        android:icon="@drawable/symbol_help"
+        android:title="@string/nav_text_help"/>
+    <item
+        android:id="@+id/action_score"
+        android:icon="@drawable/symbol_score"
+        android:title="@string/nav_text_score"/>
+<!--    <item
+        android:id="@+id/action_settings"
+        android:icon="@drawable/symbol_settings"
+        android:title="@string/nav_text_settings"
+    />-->
+</menu>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.tensaii.kidsinnature.MainActivity" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://schemas.android.com/apk/res/android ">
+
+    <ImageView
+        android:id="@+id/topBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:contentDescription="TopBarLogo"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:srcCompat="@drawable/element_top_bar"
+        tools:ignore="HardcodedText"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <!--
+    <include
+        layout="@layout/login_view" />
+    -->
+
+    <!--
+    <include
+        layout="@layout/first_view" />
+    -->
+
+    <!--
+    <include
+        layout="@layout/animals_view" />
+    -->
+
+    <!--
+    <include
+        layout="@layout/animal_view" />
+    -->
+
+
+    <!--<include
+        layout="@layout/save_photo_view" />
+    -->
+
+    <!--
+    <include
+        layout="@layout/score_view" />
+    -->
+
+    <!--
+    <include
+        layout="@layout/test_layout"/>
+    -->
+
+    <TextView
+            android:id="@+id/text_user_score"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:paddingBottom="2dp"
+            android:paddingTop="2dp"
+            android:text="@string/user_score"
+            android:textAlignment="center"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="56dp"
+    />
+
+    <android.support.design.widget.BottomNavigationView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/navigation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        app:itemIconTint="@color/nav_item_tint"
+        app:itemTextColor="@color/nav_item_text"
+        android:background="@color/colorPrimaryDark"
+        app:menu="@menu/bottom_navigation_items"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
+
+
